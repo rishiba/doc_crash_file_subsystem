@@ -9,9 +9,14 @@ Welcome to Linux Kernel - Under the hood's documentation!
 .. toctree::
    :maxdepth: 2
 
-    Introduction                            <00_introduction_to_linux_kernel.rst>
+    Introduction                            <000_introduction_to_the_book.rst>
+    Introduction to Linux Kernel            <00_introduction_to_linux_kernel.rst>
     Crash Introduction                      <01_crash_introduction.rst>
-    File Subsytem                           <02_file_subsystem.rst>
+    Understanding File Subsytem             <02_file_subsystem.rst>
+    Superblock Object                       <12_superblock.rst>
+    Inode Object                            <13_inode.rst>
+    Dentry Object                           <14_dentry.rst>
+    File Object                             <15_file_object.rst>
     File System related assignments         <03_fss_assignments.rst>
     Code of a process                       <01_code_of_an_executable.rst>
     Reading data on a page                  <02_finding_out_the_data_written_on_page.rst>

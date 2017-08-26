@@ -37,7 +37,7 @@ File Subsystem Kernel Introduction
 
 Once you have read the above chapter you now need to go through the second reference which takes you a bit deeper into the file subsystem. You must now read the book ``The design of Unix Operating System`` by ``Maurice J Bach``.
 
-You should go through the chapters 1 2 3 4 and 5. These chapters are very important and give a very good understanding of how things work under the hood.
+You should go through the chapters 1, 2, 3, 4, and 5. These chapters are very important and give a very good understanding of how things work under the hood.
 
 Amazon: http://www.amazon.in/Design-UNIX-Operating-Maurice-Bach/dp/9332549575/ref=sr_1_1?s=books&ie=UTF8&qid=1502948221&sr=1-1&keywords=the+design+of+the+unix+operating+system
 
@@ -47,7 +47,7 @@ File Subsystem Linux Kernel
 
 The VFS layer in the Linux Kernel is the file subsystem in Linux Kernel.  Now you must go through the chapter 12 of the book ``Understanding the Linux Kernel by Daniel P Bovet and Marco Cesati``.
 
-The chapter will explain you in depth all the important concepts in the VFS layer. In the exercises of the book we will be using those concepts to see how the data structures interact with each other in the VSF layer.
+The chapter will explain you in depth all the important concepts in the VFS layer. In the exercises of the book we will be using those concepts to see how the data structures interact with each other in the VFS layer.
 
 ======
 mkfs()
@@ -110,56 +110,6 @@ seek()
 
 *   Seek system call changes the current pointer of the data in the file. Using it - you can read the data from a different location in the opened file.
 
-
-===============
-Data Structures
-===============
-
-For understanding the above - you will have to understand some of the data
-structures which are used in the file subsystem to maintain the required data.
-
-========
-vfsmount
-========
-
-*   VFS mount in a data structure which is used to keep the information of the
-    mounted file systems. It keeps the folder on which a file system is mounted,
-    and the SuperBlock object of the mounted file system.
-
-================
-SuperBlock Object
-================
-
-*   SuperBlock object keep the metadata related to the whole file system. It
-    keeps the information related to the whole file system.
-
-*   Following information is maintained in the superblock object.
-
-===========
-Inode Object
-===========
-
-*   Inode object keeps the information related to the a particular file or a
-    directory.
-
-
-============
-Dentry Object
-============
-
-*   Dentry object keeps information related to a opened or in use folder. It
-    also points to its inode.
-
-==========
-File Object
-==========
-
-*   A File object keeps the information related to a file opened by a process.
-    It points to the its inode, but here the difference is that the file obejct is
-    always in context of the process which has opened the file. You can have
-    several file objects pointing to the same inode. For every ``open`` call made
-    to same file you will get a new file object but you wont get a new inode object
-    for every ``open`` call.
 
 ===============
 Further Reading
